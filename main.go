@@ -14,7 +14,7 @@ func main() {
 		v1.GET("/name", name)
 	}
 
-	router.Run("localhost:2323")
+	router.Run(":2323")
 }
 
 func welcome(c *gin.Context) {
