@@ -10,9 +10,7 @@ func main() {
 	router := gin.Default()
 	v1 := router.Group("/v1")
 	{
-		v1.GET("/", func(c *gin.Context) {
-			c.String(http.StatusOK, "Hello there, welcome")
-		})
+		v1.GET("/", welcome)
 		v1.GET("/name", func(c *gin.Context) {
 			c.JSON(200, gin.H{
 				"status":  200,
@@ -23,4 +21,8 @@ func main() {
 	}
 
 	router.Run("localhost:2323")
+}
+
+func welcome(c *gin.Context) {
+	c.String(http.StatusOK, "Hello there, welcome")
 }
