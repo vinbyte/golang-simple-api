@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 
+	"github.com/501army/golang-simple-api/config"
 	"github.com/gin-gonic/gin"
 )
 
@@ -13,8 +14,8 @@ func main() {
 		v1.GET("/", welcome)
 		v1.GET("/name", name)
 	}
-
-	router.Run(":2323")
+	conf := config.ReadConfig()
+	router.Run(":" + conf.Port)
 }
 
 func welcome(c *gin.Context) {
