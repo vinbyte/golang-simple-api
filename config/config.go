@@ -8,12 +8,15 @@ import (
 
 // Config is
 type Config struct {
-	// Database struct {
-	// 	Host     string `json:"host"`
-	// 	Password string `json:"password"`
-	// } `json:"database"`
-	Host string `json:"host"`
-	Port string `json:"port"`
+	Host     string `json:"host"`
+	Port     string `json:"port"`
+	Database struct {
+		Dbname   string `json:"dbname"`
+		User     string `json:"user"`
+		Password string `json:"password"`
+		Host     string `json:"host"`
+		Port     string `json:"port"`
+	} `json:"database"`
 }
 
 // ReadConfig is function for read config.json

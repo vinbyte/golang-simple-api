@@ -3,6 +3,22 @@
 	"ignore": "test",
 	"package": [
 		{
+			"path": "appengine/cloudsql",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "O27i/mAF17Ghy5Jh08cpNUrruSk=",
+			"path": "github.com/bxcodec/faker",
+			"revision": "36687d344cfd03a7463e722d77a0a05a68c4f116",
+			"revisionTime": "2018-11-22T08:33:12Z"
+		},
+		{
+			"checksumSHA1": "VowM9hiF3UdkRH+EyFIzhpNZTTg=",
+			"path": "github.com/bxcodec/faker/support/slice",
+			"revision": "36687d344cfd03a7463e722d77a0a05a68c4f116",
+			"revisionTime": "2018-11-22T08:33:12Z"
+		},
+		{
 			"checksumSHA1": "BhMowD2DIKSd9qq8Pzh7Y3mh2/w=",
 			"path": "github.com/gin-contrib/sse",
 			"revision": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae",
@@ -41,10 +57,28 @@
 			"versionExact": "v1.3.0"
 		},
 		{
+			"checksumSHA1": "mvlmQYBrNkf2uyAsxbExRyoCGzQ=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "c45f530f8e7fe40f4687eaa50d0c8c5f1b66f9e0",
+			"revisionTime": "2018-12-18T12:36:37Z"
+		},
+		{
 			"checksumSHA1": "Wp97rIwFg54dNwuCeR9Vslaehtw=",
 			"path": "github.com/golang/protobuf/proto",
 			"revision": "1d3f30b51784bec5aad268e59fd3c2fc1c2fe73f",
 			"revisionTime": "2018-11-28T19:23:52Z"
+		},
+		{
+			"checksumSHA1": "P5i9sKN2r4cR1CgMhv769YvXdjc=",
+			"path": "github.com/jinzhu/gorm",
+			"revision": "5ad6f621e6f59672f5b5061df85b243436fde048",
+			"revisionTime": "2018-12-13T13:04:51Z"
+		},
+		{
+			"checksumSHA1": "mfb/EusMwfajCPq0lwLWM/pvqI4=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "04140366298a54a039076d798123ffa108fff46c",
+			"revisionTime": "2018-03-08T03:36:59Z"
 		},
 		{
 			"checksumSHA1": "ZOHJwyrlDeqI9OUXEJ8PmDC72Bo=",
@@ -81,6 +115,12 @@
 			"path": "golang.org/x/sys/unix",
 			"revision": "074acd46bca67915925527c07849494d115e7c43",
 			"revisionTime": "2018-12-18T18:24:21Z"
+		},
+		{
+			"checksumSHA1": "W/pYxFe8/FHT10/wulwesJsOoUw=",
+			"path": "google.golang.org/appengine/cloudsql",
+			"revision": "e9657d882bb81064595ca3b56cbe2546bbabf7b1",
+			"revisionTime": "2018-12-17T20:59:03Z"
 		},
 		{
 			"checksumSHA1": "q190bL03wQok3wVwYmMub2XhOiU=",

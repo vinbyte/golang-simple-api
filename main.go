@@ -1,31 +1,29 @@
 package main
 
 import (
-	"net/http"
-
 	"github.com/501army/golang-simple-api/config"
+	"github.com/501army/golang-simple-api/controllers"
+	"github.com/501army/golang-simple-api/utils/db"
 	"github.com/gin-gonic/gin"
 )
 
+var conf = config.ReadConfig()
+
 func main() {
+	welcomeController := controllers.NewWelcomeController()
+	nameController := controllers.NewNameController()
+	peopleController := new(controllers.PeopleController)
+
+	db.Init()
+	peopleController.Create()
+
 	router := gin.Default()
 	v1 := router.Group("/v1")
 	{
-		v1.GET("/", welcome)
-		v1.GET("/name", name)
+		v1.GET("/", welcomeController.Welcome)
+		v1.GET("/name", nameController.Name)
+		v1.GET("/peoples", peopleController.FetchAll)
 	}
-	conf := config.ReadConfig()
+
 	router.Run(":" + conf.Port)
-}
-
-func welcome(c *gin.Context) {
-	c.String(http.StatusOK, "Hello there, welcome")
-}
-
-func name(c *gin.Context) {
-	c.JSON(200, gin.H{
-		"status":  200,
-		"message": "success",
-		"name":    "Gavinda Kinandana",
-	})
 }
