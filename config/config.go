@@ -17,6 +17,7 @@ type Config struct {
 		Host     string `json:"host"`
 		Port     string `json:"port"`
 	} `json:"database"`
+	PeopleNum int `json:"people_num"`
 }
 
 // ReadConfig is function for read config.json

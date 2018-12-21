@@ -3,6 +3,7 @@ package models
 import (
 	"fmt"
 
+	"github.com/501army/golang-simple-api/config"
 	"github.com/501army/golang-simple-api/utils/db"
 	"github.com/bxcodec/faker"
 )
@@ -28,12 +29,14 @@ type PeopleTransformed struct {
 //PeopleModel ...
 type PeopleModel struct{}
 
+var conf = config.ReadConfig()
+
 // Init is
 func (m PeopleModel) Init() {
 	hasPeople := db.GetDB().HasTable("peoples")
 	if hasPeople == false {
 		db.GetDB().Set("gorm:table_options", "ENGINE=InnoDB").CreateTable(&people{})
-		for i := 0; i < 10000; i++ {
+		for i := 0; i < conf.PeopleNum; i++ {
 			a := fakerPeople{}
 			err := faker.FakeData(&a)
 			if err != nil {
