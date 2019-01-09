@@ -9,8 +9,8 @@
 9. Now your application is running in your specific port in config (default 2323). Try to access `/v1` a message will appear.
 
 Route list:
-`v1/name` : will produce json include my name :D
-`v1/peoples` : will produce json all people data in table
+* `v1/name` : will produce json include my name :D
+* `v1/peoples` : will produce json all people data in table
 
 Depedencies :
 - [Golang ORM](https://github.com/jinzhu/gorm)
