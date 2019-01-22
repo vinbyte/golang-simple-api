@@ -7,11 +7,6 @@ import (
 // NameController is
 type NameController struct{}
 
-// NewNameController is
-func NewNameController() *NameController {
-	return &NameController{}
-}
-
 // Name is
 func (w *NameController) Name(c *gin.Context) {
 	c.JSON(200, gin.H{

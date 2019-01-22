@@ -10,8 +10,8 @@ import (
 var conf = config.ReadConfig()
 
 func main() {
-	welcomeController := controllers.NewWelcomeController()
-	nameController := controllers.NewNameController()
+	welcomeController := new(controllers.WelcomeController)
+	nameController := new(controllers.NameController)
 	peopleController := new(controllers.PeopleController)
 
 	db.Init()
