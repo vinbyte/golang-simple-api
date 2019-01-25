@@ -19,6 +19,7 @@ type Config struct {
 	} `json:"database"`
 	PeopleNum int    `json:"people_num"`
 	ServerKey string `json:"server_key"`
+	Mode      string `json:"mode"`
 }
 
 // ReadConfig is function for read config.json

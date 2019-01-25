@@ -51,7 +51,9 @@ func main() {
 
 	db.Init()
 	peopleController.Create()
-
+	if conf.Mode == "production" {
+		gin.SetMode(gin.ReleaseMode)
+	}
 	router := gin.Default()
 	router.Use(middleware())
 	v1 := router.Group("/v1")

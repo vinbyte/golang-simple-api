@@ -9,5 +9,6 @@
         "port": "3306"
     },
     "people_num": 10000,
-    "server_key": "Th1s_is_K3Y"
+    "server_key": "Th1s_is_K3Y",
+    "mode":"development"
 }
