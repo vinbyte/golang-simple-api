@@ -3,10 +3,10 @@ package main
 import (
 	"strings"
 
-	"github.com/501army/golang-simple-api/config"
-	"github.com/501army/golang-simple-api/controllers"
-	"github.com/501army/golang-simple-api/utils/db"
 	"github.com/gin-gonic/gin"
+	"github.com/rabbitmeow/golang-simple-api/config"
+	"github.com/rabbitmeow/golang-simple-api/controllers"
+	"github.com/rabbitmeow/golang-simple-api/utils/db"
 )
 
 var conf = config.ReadConfig()

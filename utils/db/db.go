@@ -1,7 +1,7 @@
 package db
 
 import (
-	"github.com/501army/golang-simple-api/config"
+	"github.com/rabbitmeow/golang-simple-api/config"
 	// import dialect
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"

@@ -3,8 +3,8 @@ package models
 import (
 	"fmt"
 
-	"github.com/501army/golang-simple-api/config"
-	"github.com/501army/golang-simple-api/utils/db"
+	"github.com/rabbitmeow/golang-simple-api/config"
+	"github.com/rabbitmeow/golang-simple-api/utils/db"
 	"github.com/bxcodec/faker"
 )
 

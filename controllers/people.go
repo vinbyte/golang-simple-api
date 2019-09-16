@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/501army/golang-simple-api/models"
 	"github.com/gin-gonic/gin"
+	"github.com/rabbitmeow/golang-simple-api/models"
 )
 
 // PeopleController is
