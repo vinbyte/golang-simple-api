@@ -65,6 +65,8 @@ func (s *Student) StudentList(c *gin.Context) {
 		}
 		resData.List = append(resData.List, temp)
 	}
+
+	//send the result
 	res.Data = resData
 	c.JSON(200, res)
 }
@@ -77,9 +79,11 @@ func (s *Student) StudentAdd(c *gin.Context) {
 	//make data property empty JSON object ( {} )
 	res.Data = new(struct{})
 
+	//bind parameter into struct
 	var data studentData
 	c.Bind(&data)
 
+	//insert the data
 	query := `insert into students (name, grade) values(?, ?)`
 	_, err := s.db.Exec(query, data.Name, data.Grade)
 	if err != nil {
@@ -88,5 +92,7 @@ func (s *Student) StudentAdd(c *gin.Context) {
 		c.JSON(500, res)
 		return
 	}
+
+	//send response
 	c.JSON(200, res)
 }
