@@ -8,7 +8,7 @@ import (
 func Init(r *gin.Engine, s students.Student) {
 	v1 := r.Group("v1")
 	{
-		v1.GET("/students", s.StudentList)
+		v1.GET("/student", s.StudentList)
 		v1.POST("/student", s.StudentAdd)
 	}
 }
