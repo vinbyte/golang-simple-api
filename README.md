@@ -13,3 +13,7 @@
 | --- | --- | --- | --- |
 | `/student` | `GET` | | Mengambil daftar siswa |
 | `/student` |`POST`| `name`, `grade` | Menambahkan siswa |
+
+## Test
+
+To run unit test along with coverage, run `go test -v -cover ./...`
