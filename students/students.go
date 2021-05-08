@@ -37,6 +37,8 @@ func New(db *sql.DB) Student {
 func (s *Student) StudentList(c *gin.Context) {
 	//prepare response
 	var res response
+	res.Status = 200
+	res.Message = "success"
 	var resData studentResponse
 	//make data property empty JSON object ( {} )
 	res.Data = new(struct{})
