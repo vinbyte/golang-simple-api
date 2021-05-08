@@ -131,7 +131,7 @@ func TestStudentAdd(t *testing.T) {
 		assert.Equal(t, 200, rec.Code)
 		assert.Equal(t, 200, mockResponse.Status)
 	})
-	t.Run("success add", func(t *testing.T) {
+	t.Run("error insert", func(t *testing.T) {
 		db, mock, err := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
 		if err != nil {
 			t.Fatalf("an error '%s' was not expected when opening a stub database connection", err)
