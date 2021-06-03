@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"github.com/vinbyte/golang-simple-api/db"
+	"github.com/vinbyte/golang-simple-api/middleware"
 	"github.com/vinbyte/golang-simple-api/router"
 	"github.com/vinbyte/golang-simple-api/students"
 )
@@ -24,6 +25,10 @@ func main() {
 
 	//init students package
 	s := students.New(db)
+
+	//setup middleware
+	m := middleware.New()
+	server.Use(m.CORS())
 
 	//init router
 	router.Init(server, s)
